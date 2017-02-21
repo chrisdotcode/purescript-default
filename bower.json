@@ -1,0 +1,16 @@
+{
+  "name": "purescript-default",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "output"
+  ],
+  "dependencies": {
+    "purescript-prelude": "^2.4.0"
+  },
+  "devDependencies": {
+    "purescript-console": "^2.0.0",
+    "purescript-psci-support": "^2.0.0"
+  }
+}
