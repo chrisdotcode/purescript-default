@@ -2,14 +2,26 @@ module Data.Default (class Default, default) where
 
 import Prelude (Ordering(EQ), Unit, id, unit)
 
-import Data.Identity (Identity(Identity))
-import Data.Either   (Either(Right))
-import Data.List     (List(Nil))
-import Data.Maybe    (Maybe(Nothing))
-import Data.Tuple    (Tuple(Tuple))
+import Data.Identity                (Identity(Identity))
+import Data.Either                  (Either(Right))
+import Data.Foreign.Null            (Null(Null))
+import Data.Foreign.Undefined       (Undefined(Undefined))
+import Data.Foreign.NullOrUndefined (NullOrUndefined(NullOrUndefined))
+import Data.List                    (List(Nil))
+import Data.Maybe                   (Maybe(Nothing))
+import Data.Tuple                   (Tuple(Tuple))
 
 class Default a where
 	default :: a
+
+instance defaultNull :: Default (Null a) where
+	default = Null Nothing
+
+instance defaultUndefined :: Default (Undefined a) where
+	default = Undefined Nothing
+
+instance defaultNullOrUndefined :: Default (NullOrUndefined a) where
+	default = NullOrUndefined Nothing
 
 instance defaultBoolean :: Default Boolean where
 	default = true
