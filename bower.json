@@ -1,5 +1,10 @@
 {
   "name": "purescript-default",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/chrisdotcode/purescript-default.git"
+  },
   "ignore": [
     "**/.*",
     "node_modules",
