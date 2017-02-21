@@ -24,7 +24,7 @@ instance defaultNullOrUndefined :: Default (NullOrUndefined a) where
 	default = NullOrUndefined Nothing
 
 instance defaultBoolean :: Default Boolean where
-	default = true
+	default = false
 
 instance defaultInt :: Default Int where
 	default = 0
