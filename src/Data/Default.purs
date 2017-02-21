@@ -11,6 +11,7 @@ import Data.List                    (List(Nil))
 import Data.Maybe                   (Maybe(Nothing))
 import Data.Tuple                   (Tuple(Tuple))
 
+-- | A class for types that have some notion of a default value.
 class Default a where
 	default :: a
 
